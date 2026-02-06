@@ -15,4 +15,3 @@ def cache(func: Callable) -> Callable:
             trash[key] = res
             return res
     return inner
-
