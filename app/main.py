@@ -6,11 +6,9 @@ def cache(func: Callable) -> Callable:
 
     def inner(*args, **kwargs) -> object:
         key = (args, tuple(kwargs.items()))
-
         if key in trash:
             print("Getting from cache")
             return trash[key]
-        
         else:
             print("Calculating new result")
             res = func(*args, **kwargs)
