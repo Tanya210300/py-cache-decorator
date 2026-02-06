@@ -1,7 +1,7 @@
 from typing import Callable
 
 
-def cache(func) -> Callable:
+def cache(func: Callable) -> Callable:
     trash = {}
     def inner(*args, **kwargs):
         key = (args, tuple(kwargs.items()))
